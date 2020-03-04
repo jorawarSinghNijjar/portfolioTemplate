@@ -4,6 +4,6 @@
 --Designed using bootstrap 4
 
 Authors:
-Amardeep Singh
-Jorawar Singh
-Gurjeet Singh
+1.Amardeep Singh
+2.Jorawar Singh
+3.Gurjeet Singh
