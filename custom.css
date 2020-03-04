@@ -1,0 +1,44 @@
+.bg-dark-blue{
+    background-color: rgb(0, 33, 73);
+}
+
+.text-white{
+    color: white;
+}
+
+.text-grey{
+    color: grey;
+}
+
+.partition{
+    height:1vh;
+    width:100%;
+    background-color: #b9732f;
+}
+
+.front-background{
+    position: absolute;
+    top:0;
+    left:0;
+    height:800px;
+    width:100%;
+    z-index:-1;
+}
+.main-content{
+    position: absolute;
+    top:800px;
+    left:0;
+    width:100%;
+}
+
+.centered-box{
+    position: relative;
+    top:100px;
+    width:50%;
+    height:max-content;
+    padding:1%;
+}
+#img-author{
+    position: relative;
+    top: -30px;
+}
