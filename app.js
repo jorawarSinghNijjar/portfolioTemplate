@@ -1,3 +1,4 @@
+let animationDone = false;
 //animate find out button
 const findOut = document.querySelector("#find-out");
 
@@ -9,13 +10,82 @@ findOut.addEventListener("mouseleave",() => {
     findOut.classList.remove("animated","wobble");
 });
 
-//animate name
-const author = document.querySelector("#author");
 
-author.addEventListener("mouseenter",() => {
-    author.classList.add("animated","bounce");
+//sticky nav on scroll
+const html = document.querySelector('html');
+const nav = document.querySelector('#navbar');
+
+window.addEventListener('scroll', (e) => {
+    if((html.clientHeight - window.scrollY) < 0){
+        nav.classList.add('fixed-top');
+        
+        if(!animationDone){
+            animateAbout();
+        }
+        
+        
+    }
+    else{
+        nav.classList.remove('fixed-top');
+    }
 });
 
-author.addEventListener("mouseleave",() => {
-    author.classList.remove("animated","bounce");
+
+
+
+//Skill scale
+
+const scaleWrapper = document.querySelector('.scale-wrapper');
+const skills = [
+    { name:'java', value: 80 },
+    { name: 'javascript', value:90},
+    { name: 'HTML', value: 80},
+    { name: 'CSS', value: 70},
+    { name: 'React', value: 70},
+    { name: 'Node.js', value: 60}
+];
+
+skills.forEach(skill => {
+    scaleWrapper.innerHTML += `
+        <div class="scale my-2">
+            <div class="skill-name">
+                ${skill.name}
+            </div>
+            <div class="percent-wrapper">
+                <div class="skill-percentage">
+                    ${skill.value}%
+                </div>
+            </div>
+        </div>
+    `;
+    
 });
+
+
+const percent = document.getElementsByClassName('skill-percentage');
+const percentArr = Array.from(percent);
+const skillName = document.querySelector('.skill-name');
+
+
+
+//animate functions
+const aboutHeading = document.querySelector('#about-heading');
+const authorDetail = document.querySelector('#author-detail');
+
+
+const animateAbout = () => {
+    aboutHeading.classList.add('animated','bounceInLeft','slower');
+    scaleWrapper.classList.add('animated','bounceInRight','slower');
+    authorDetail.classList.add('animated','bounceInLeft','slower');
+
+    setTimeout(()=>{
+        percentArr.forEach(item =>{
+            let width = item.textContent.trim().slice(0,-1) + "%";
+            $(item).animate({
+                width: width
+            },'slow');
+        });
+    },2000);
+
+    animationDone = true;
+}
