@@ -96,3 +96,13 @@ a{
     border-radius: 10px;
     width: 250px;
 }
+
+.about-img{
+    padding-top: 10vh;
+    width: 100%;
+}
+
+.project-img{
+    width: 30%;
+    height: 40vh;
+}
