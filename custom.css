@@ -14,10 +14,18 @@ html{
     color: grey;
 }
 
+.mt-50{
+    margin-top: 70vh;
+}
+.author-name{
+    color:#0D0E20;
+    font-size: 150%;
+}
 .partition{
     height:0.5vh;
     width:100%;
     background-color: #b9732f;
+    margin-bottom: 20px;
 }
 
 .front-background{
@@ -37,7 +45,7 @@ html{
 
 .centered-box{
     position: relative;
-    top:5vh;
+    top:3vh;
     width:50%;
     height:max-content;
     padding:1%;
@@ -51,11 +59,16 @@ a{
     text-decoration: none;
 }
 
+.author-name:hover{
+    color: white;
+    text-decoration: none;
+}
+
 /* skill scale */
 
 .scale{
     background-color: #B1C0CB;
-    height:5vh;
+    height:4vh;
     width:100%;
     border-radius: 3px;
     list-style: none;
@@ -69,14 +82,14 @@ a{
     font-size: 3vh;
     font-weight: bold;
     text-align: center;
-    background-color: #0650AE;
+    background-color: #0071BD;
     border-bottom-left-radius: inherit;
     border-top-left-radius: inherit;
     /* display: none; */
 }
 
 .skill-percentage{
-    background-color: #FF4136;
+    background-color: #43bc41;
     width:0%;
     height:100%;
     font-size: 3vh;
@@ -93,8 +106,10 @@ a{
 }
 
 #author-image{
-    border-radius: 10px;
+    border-radius: 50% !important;
     width: 250px;
+    height:250px;
+    object-fit: cover;
 }
 
 .about-img{
@@ -105,4 +120,8 @@ a{
 .project-img{
     width: 30%;
     height: 40vh;
+}
+
+#find-out{
+    animation-iteration-count: 4;
 }

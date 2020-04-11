@@ -6,27 +6,22 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-715VMUUaOfZR3/rWXZJ9agJ/udwSXGEigabzUbJm2NR4/v5wpDy8c14yedZN6NL7" crossorigin="anonymous">
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="animate.css">
     <script src="https://kit.fontawesome.com/fd63d41372.js" crossorigin="anonymous"></script>
-    <title>Portfolio-Nav-Part</title>
+    <title>Jorawar Singh - Portfolio</title>
   </head>
   <body>
     <!-- front-image -->
     <div id="home" class="img-container">
-      <img class="img-fluid front-background" src="images/modal-background-img.jpg" alt=""></img>
-      <div class="centered-box mx-auto animated fadeInUp">
+      <img class="img-fluid front-background" src="images/developer-image.jpg" alt=""></img>
+      <div class="centered-box mx-auto animated fadeInLeft">
         <div class="row">
-            <h1 class="text-center text-grey">Welcome to <span id="author"><a href="#About" class="text-warning">Amardeep Singh's</a></span> Portfolio Website</h1>
+            <h1 class="text-white mx-auto">Hi! I am <span id="author"><a href="#About" class="author-name">Jorawar Singh</a></span></h1>
         </div>
-        <div class="row">
-            <a id="find-out" class="btn btn-lg btn-success mx-auto" href="#about">Find Out More <i class="fas fa-angle-double-down"></i></a>
+        <div class="row mt-50">
+            <a id="find-out" class="btn btn-lg btn-block btn-danger mx-auto" href="#about">Find Out More <i class="fas fa-angle-double-right"></i></a>
         </div>
       </div>
       <!-- <span class="text-sm-right text-grey font-italic" id="img-author">Photo by Ales Nesetril on Unsplash</span> -->
@@ -53,13 +48,13 @@
                   <a class="nav-link" href="#home">HOME</a>
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#">PORTFOLIO</a>
+                  <a class="nav-link" href="#projects">PORTFOLIO</a>
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#">ABOUT</a>
+                  <a class="nav-link" href="#about">ABOUT</a>
                 </li>
                 <li class="nav-item mx-4">
-                  <a class="nav-link" href="#">CONTACT</a>
+                  <a class="nav-link" href="#contact">CONTACT</a>
                 </li>
               </ul>
             </div>
@@ -71,15 +66,16 @@
         <div id="about">
           <div class="row">
             <div class="col-md-12">
-              <h1 class="text-center my-3" id="about-heading">About</h1>
+              <h1 class="text-center my-3" id="about-heading">ABOUT ME</h1>
             </div>
           </div>
-          <div class="row">
+          <div class="partition"></div>
+          <div class="row mt-4">
             <div id="author-detail" class="col-md-6">
-              <img id="author-image" src="images/author-image.jpg" alt="author-image" class="border rounded mx-auto d-block">
+              <img id="author-image" src="images/myPhoto.jpg" alt="author-image" class="border rounded mx-auto d-block">
               <h2 class="text-center my-1">Who am I?</h2>
               <p class="text-center my-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Cras adipiscing enim eu turpis egestas pretium. Amet aliquam id diam maecenas ultricies mi eget mauris pharetra. Amet commodo nulla facilisi nullam vehicula. Varius vel pharetra vel turpis nunc. Scelerisque fermentum dui faucibus in ornare. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
+                I am a Front End Web Developer with a keen interest in designing websites. I have worked on projects based on React, JS, Bootstrap and other popular technologies.
               </p>
             </div>
             <div class="col-md-6">
@@ -127,21 +123,21 @@
               <h1 class="text-center my-3" id="projects-heading">Projects</h1>
             </div>
           </div>
+          <div class="partition"></div>
           <div class="row">
             <div class="col-md-4">
-              <h3 class="text-center my-1">All</h3>
+              <button class="btn btn-block btn-lg btn-success text-center my-1">All</button>
             </div>
             <div class="col-md-4">
-              <h3 class="text-center my-1">Javascript</h3>
+              <button class="btn btn-block btn-lg btn-warning text-center my-1">JavaScript</button>
             </div>
             <div class="col-md-4">
-              <h3 class="text-center my-1">React-JS</h3>
+              <button class="btn btn-block btn-lg btn-primary text-center my-1">React-JS</button>
             </div>
           </div>
           <div class="row">
             <div class="col-md text-center">
-                <img src="images/projects.jpg" alt="" class="project-img">
-                <img src="images/project-2.jpg" alt="" class="project-img">
+                <a href="https://healthcare-365.herokuapp.com/"><img src="images/Healthcare-img.jpg" alt="" class="project-img"></a>
             </div>
           </div>
         </div>
@@ -153,6 +149,7 @@
               <h1 class="text-center my-3">Contact Me</h1>
             </div>
           </div>
+          <div class="partition"></div>
           <div class="row">
             <div class="col-md">
               <form action="">

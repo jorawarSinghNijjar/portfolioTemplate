@@ -1,14 +1,19 @@
 let animationDone = false;
 //animate find out button
 const findOut = document.querySelector("#find-out");
-
+const findOutArrow = document.querySelector(".fa-angle-double-right");
+findOut.classList.add("animated","bounce");
 findOut.addEventListener("mouseenter",() => {
-    findOut.classList.add("animated","wobble");
+    
+    $(findOutArrow).animate({marginLeft:"5rem"});
 });
 
 findOut.addEventListener("mouseleave",() => {
-    findOut.classList.remove("animated","wobble");
+    // findOut.classList.remove("animated","wobble");
+    $(findOutArrow).animate({marginLeft:"0rem"});
 });
+
+
 
 
 //sticky nav on scroll
@@ -37,8 +42,8 @@ window.addEventListener('scroll', (e) => {
 
 const scaleWrapper = document.querySelector('.scale-wrapper');
 const skills = [
-    { name:'java', value: 80 },
-    { name: 'javascript', value:90},
+    { name:'Java', value: 80 },
+    { name: 'Javascript', value:90},
     { name: 'HTML', value: 80},
     { name: 'CSS', value: 70},
     { name: 'React', value: 70},
