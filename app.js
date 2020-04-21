@@ -1,3 +1,33 @@
+//front-image
+
+const frontImage = document.querySelector('#front-image');
+const centerBoxDesktop = document.querySelector('.desktop');
+const centerBoxMobile = document.querySelector('.mobile');
+
+function displayContent(){
+    let viewportWidth = window.innerWidth;
+    if(viewportWidth <= 500){
+        frontImage.setAttribute('src','images/mobile-image.jpg');
+        frontImage.style.objectFit = "fill";
+        frontImage.style.height="70%";
+        frontImage.style.marginTop="2rem";
+        centerBoxDesktop.style.display = "none";
+        centerBoxMobile.style.display = "block";
+    }
+    else{
+        frontImage.setAttribute('src','images/developer-image.jpg');
+        centerBoxDesktop.style.display = "block";
+        centerBoxMobile.style.display = "none";
+    }
+}
+$(window).resize(function(){
+    displayContent();
+});
+$(document).ready(function(){
+    displayContent();
+});
+
+
 let animationDone = false;
 //animate find out button
 const findOut = document.querySelector("#find-out");
@@ -53,7 +83,7 @@ const skills = [
 skills.forEach(skill => {
     scaleWrapper.innerHTML += `
         <div class="scale my-2">
-            <div class="skill-name">
+            <div class="skill-name text-white">
                 ${skill.name}
             </div>
             <div class="percent-wrapper">
@@ -76,13 +106,13 @@ const skillName = document.querySelector('.skill-name');
 //animate functions
 const aboutHeading = document.querySelector('#about-heading');
 const authorDetail = document.querySelector('#author-detail');
-
+const aboutUnderline = document.querySelector('#about-underline');
 
 const animateAbout = () => {
     aboutHeading.classList.add('animated','bounceInLeft','slower');
     scaleWrapper.classList.add('animated','bounceInRight','slower');
     authorDetail.classList.add('animated','bounceInLeft','slower');
-
+    aboutUnderline.classList.add('animated','bounceInLeft', 'slower');
     setTimeout(()=>{
         percentArr.forEach(item =>{
             let width = item.textContent.trim().slice(0,-1) + "%";
@@ -95,16 +125,3 @@ const animateAbout = () => {
     animationDone = true;
 }
 
-//front-image
-const viewportWidth = window.innerWidth;
-const frontImage = document.querySelector('#front-image');
-const centerBoxDesktop = document.querySelector('.desktop');
-const centerBoxMobile = document.querySelector('.mobile');
-if(viewportWidth <= 400){
-    frontImage.setAttribute('src','images/mobile-image.jpg');
-    frontImage.style.objectFit = "fill";
-    frontImage.style.height="70%";
-    frontImage.style.marginTop="2rem";
-    centerBoxDesktop.style.display = "none";
-    centerBoxMobile.style.display = "block";
-}
