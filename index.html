@@ -15,10 +15,18 @@
   <body>
     <!-- front-image -->
     <div id="home" class="img-container">
-      <img class="img-fluid front-background" src="images/developer-image.jpg" alt=""></img>
-      <div class="centered-box mx-auto animated fadeInLeft">
+      <img id="front-image" class="img-fluid front-background" src="images/developer-image.jpg" alt=""></img>
+      <div class="centered-box mx-auto animated fadeInLeft desktop">
         <div class="row">
             <h1 class="text-white mx-auto">Hi! I am <span id="author"><a href="#About" class="author-name">Jorawar Singh</a></span></h1>
+        </div>
+        <div class="row mt-50">
+            <a id="find-out" class="btn btn-lg btn-block btn-danger mx-auto" href="#about">Find Out More <i class="fas fa-angle-double-right"></i></a>
+        </div>
+      </div>
+      <div class="animated fadeInLeft mobile">
+        <div class="row">
+            <h6 class="mx-auto">Hi! I am <span id="author"><a href="#About" class="author-name">Jorawar Singh</a></span></h6>
         </div>
         <div class="row mt-50">
             <a id="find-out" class="btn btn-lg btn-block btn-danger mx-auto" href="#about">Find Out More <i class="fas fa-angle-double-right"></i></a>
@@ -29,7 +37,7 @@
 
     <!-- main content of page -->
     <div class="main-content">
-      <div class="partition"></div>
+      <!-- <div class="partition"></div> -->
       <div id="navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue">
           <div class="container">
@@ -137,7 +145,7 @@
           </div>
           <div class="row">
             <div class="col-md text-center">
-                <a href="https://healthcare-365.herokuapp.com/"><img src="images/Healthcare-img.jpg" alt="" class="project-img"></a>
+                <a href="https://healthcare-365.herokuapp.com/"><img src="images/Healthcare-img.jpg" alt="" class="img-fluid"></a>
             </div>
           </div>
         </div>

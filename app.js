@@ -94,3 +94,17 @@ const animateAbout = () => {
 
     animationDone = true;
 }
+
+//front-image
+const viewportWidth = window.innerWidth;
+const frontImage = document.querySelector('#front-image');
+const centerBoxDesktop = document.querySelector('.desktop');
+const centerBoxMobile = document.querySelector('.mobile');
+if(viewportWidth <= 400){
+    frontImage.setAttribute('src','images/mobile-image.jpg');
+    frontImage.style.objectFit = "fill";
+    frontImage.style.height="70%";
+    frontImage.style.marginTop="2rem";
+    centerBoxDesktop.style.display = "none";
+    centerBoxMobile.style.display = "block";
+}
