@@ -7,15 +7,15 @@ const centerBoxMobile = document.querySelector('.mobile');
 function displayContent(){
     let viewportWidth = window.innerWidth;
     if(viewportWidth <= 500){
-        frontImage.setAttribute('src','images/mobile-image.jpg');
-        frontImage.style.objectFit = "fill";
+        frontImage.setAttribute('src','images/mobile-image-2.jpg');
+        frontImage.style.objectFit = "cover";
         frontImage.style.height="70%";
         frontImage.style.marginTop="2rem";
         centerBoxDesktop.style.display = "none";
         centerBoxMobile.style.display = "block";
     }
     else{
-        frontImage.setAttribute('src','images/developer-image.jpg');
+        frontImage.setAttribute('src','images/front-background.jpg');
         centerBoxDesktop.style.display = "block";
         centerBoxMobile.style.display = "none";
     }
