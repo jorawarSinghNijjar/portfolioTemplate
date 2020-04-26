@@ -4,27 +4,37 @@ const frontImage = document.querySelector('#front-image');
 const centerBoxDesktop = document.querySelector('.desktop');
 const centerBoxMobile = document.querySelector('.mobile');
 
-function displayContent(){
-    let viewportWidth = window.innerWidth;
-    if(viewportWidth <= 500){
-        frontImage.setAttribute('src','images/mobile-image-2.jpg');
-        frontImage.style.objectFit = "cover";
-        frontImage.style.height="70%";
-        frontImage.style.marginTop="2rem";
-        centerBoxDesktop.style.display = "none";
-        centerBoxMobile.style.display = "block";
-    }
-    else{
-        frontImage.setAttribute('src','images/front-background.jpg');
-        centerBoxDesktop.style.display = "block";
-        centerBoxMobile.style.display = "none";
-    }
-}
-$(window).resize(function(){
-    displayContent();
-});
-$(document).ready(function(){
-    displayContent();
+// function displayContent(){
+//     let viewportWidth = window.innerWidth;
+//     if(viewportWidth <= 500){
+//         frontImage.setAttribute('src','images/mobile-image-2.jpg');
+//         frontImage.style.objectFit = "cover";
+//         frontImage.style.height="70%";
+//         frontImage.style.marginTop="2rem";
+//         centerBoxDesktop.style.display = "none";
+//         centerBoxMobile.style.display = "block";
+//     }
+//     else{
+//         frontImage.setAttribute('src','images/front-background.jpg');
+//         centerBoxDesktop.style.display = "block";
+//         centerBoxMobile.style.display = "none";
+//     }
+// }
+// $(window).resize(function(){
+//     displayContent();
+// });
+// $(document).ready(function(){
+//     displayContent();
+// });
+
+
+// Mobile Menu button
+
+$('#menu-btn').click(()=>{
+    $('#welcome-text').fadeOut(()=>{
+        $('#menu-options').show();
+    });
+    
 });
 
 

@@ -9,12 +9,13 @@
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-715VMUUaOfZR3/rWXZJ9agJ/udwSXGEigabzUbJm2NR4/v5wpDy8c14yedZN6NL7" crossorigin="anonymous">
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="mobile.css">
     <script src="https://kit.fontawesome.com/fd63d41372.js" crossorigin="anonymous"></script>
     <title>Jorawar Singh - Portfolio</title>
   </head>
   <body>
     <!-- front-image -->
-    <div id="home" class="img-container">
+    <div id="home" class="img-container desktop">
       <img id="front-image" class="img-fluid front-background" src="images/front-background.jpg" alt=""></img>
       <div class="centered-box mx-auto animated fadeInLeft desktop">
         <div class="row">
@@ -35,8 +36,24 @@
       <!-- <span class="text-sm-right text-grey font-italic" id="img-author">Photo by Ales Nesetril on Unsplash</span> -->
     </div>
 
+    <!-- Mobile Home Page -->
+    <div id="mobile-home">
+      <div class="container">
+        <h1 id="welcome-text" class="text-center">Hi I am Jorawar Singh!</h1>
+        <div id="menu-options" class="mx-auto text-center">
+          <h1 class="underline py-3 animated fadeInLeft">About</h1>
+          <h1 class="underline py-3 animated fadeInRight">Portfolio</h1>
+          <h1 class="underline py-3 animated fadeInLeft">Contact</h1>
+        </div>
+      </div>
+      <div id="menu-btn" class="text-center animated fadeInUp slow">
+        <h2 id="menu-text">Menu</h2>
+      </div>
+    </div>
+
+
     <!-- main content of page -->
-    <div class="main-content">
+    <div class="main-content desktop">
       <!-- <div class="partition"></div> -->
       <div id="navbar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue">

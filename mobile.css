@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+#mobile-home {
+  background-color: #36bc9b;
+  width: 100vw;
+  height: 100vh;
+  color:white;
+  font-family: 'Righteous', cursive;
+}
+
+#menu-btn {
+  background-color: #e65454;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  margin-left: -3.5rem;
+  transition: transform .2s;
+}
+
+#menu-text {
+  padding-top: 2rem;
+}
+
+#menu-btn:active,
+#menu-btn:hover {
+  color: white;
+  background-color: black;
+}
+
+#menu-options{
+    position: relative;
+    top:20vh;
+    width:max-content;
+    display: none;
+}
+
+.underline{
+    border-bottom: 2px solid white;
+}
+
+#welcome-text{
+    display:block;
+    position: relative;
+    top:30vh;
+}
