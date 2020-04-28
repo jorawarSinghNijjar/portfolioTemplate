@@ -1,31 +1,46 @@
-//front-image
+//Size change effect in window
 
-const frontImage = document.querySelector('#front-image');
-const centerBoxDesktop = document.querySelector('.desktop');
-const centerBoxMobile = document.querySelector('.mobile');
+const desktopContent = document.getElementsByClassName("desktop");
+const desktopContentArr = Array.from(desktopContent);
 
-// function displayContent(){
-//     let viewportWidth = window.innerWidth;
-//     if(viewportWidth <= 500){
-//         frontImage.setAttribute('src','images/mobile-image-2.jpg');
-//         frontImage.style.objectFit = "cover";
-//         frontImage.style.height="70%";
-//         frontImage.style.marginTop="2rem";
-//         centerBoxDesktop.style.display = "none";
-//         centerBoxMobile.style.display = "block";
-//     }
-//     else{
-//         frontImage.setAttribute('src','images/front-background.jpg');
-//         centerBoxDesktop.style.display = "block";
-//         centerBoxMobile.style.display = "none";
-//     }
-// }
-// $(window).resize(function(){
-//     displayContent();
-// });
-// $(document).ready(function(){
-//     displayContent();
-// });
+const mobileContent = document.getElementsByClassName('mobile');
+const mobileContentArr = Array.from(mobileContent);
+
+function showNodes(arr){
+    arr.forEach(node => {
+        node.style.display = "block";
+    });
+}
+
+function hideNodes(arr){
+    arr.forEach(node => {
+        node.style.display = "none";
+    });
+}
+
+function displayContent(){
+    let viewportWidth = window.innerWidth;
+    if(viewportWidth <= 500){
+
+        showNodes(mobileContentArr);
+        hideNodes(desktopContentArr);
+        // frontImage.style.objectFit = "cover";
+        // frontImage.style.height="70%";
+        // frontImage.style.marginTop="2rem";
+        // centerBoxDesktop.style.display = "none";
+        // centerBoxMobile.style.display = "block";
+    }
+    else{
+        showNodes(desktopContentArr);
+        hideNodes(mobileContentArr);
+    }
+}
+$(window).resize(function(){
+    displayContent();
+});
+$(document).ready(function(){
+    displayContent();
+});
 
 
 // Mobile Menu button
@@ -42,7 +57,7 @@ let animationDone = false;
 //animate find out button
 const findOut = document.querySelector("#find-out");
 const findOutArrow = document.querySelector(".fa-angle-double-right");
-findOut.classList.add("animated","bounce");
+// findOut.classList.add("animated","heartBeat");
 findOut.addEventListener("mouseenter",() => {
     
     $(findOutArrow).animate({marginLeft:"5rem"});
@@ -87,7 +102,9 @@ const skills = [
     { name: 'HTML', value: 80},
     { name: 'CSS', value: 70},
     { name: 'React', value: 70},
-    { name: 'Node.js', value: 60}
+    { name: 'Node.js', value: 60},
+    { name: 'Bootstrap', value: 70},
+    { name: 'Python', value: 40}
 ];
 
 skills.forEach(skill => {
@@ -98,7 +115,7 @@ skills.forEach(skill => {
             </div>
             <div class="percent-wrapper">
                 <div class="skill-percentage">
-                    ${skill.value}%
+                    <span class="skill-value">${skill.value}%</span>
                 </div>
             </div>
         </div>
@@ -123,15 +140,20 @@ const animateAbout = () => {
     scaleWrapper.classList.add('animated','bounceInRight','slower');
     authorDetail.classList.add('animated','bounceInLeft','slower');
     aboutUnderline.classList.add('animated','bounceInLeft', 'slower');
+    
     setTimeout(()=>{
         percentArr.forEach(item =>{
             let width = item.textContent.trim().slice(0,-1) + "%";
             $(item).animate({
-                width: width
+                width: width,
             },'slow');
+            $(item.children[0]).show();
         });
+        
     },2000);
 
     animationDone = true;
 }
+
+
 

@@ -6,10 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-715VMUUaOfZR3/rWXZJ9agJ/udwSXGEigabzUbJm2NR4/v5wpDy8c14yedZN6NL7" crossorigin="anonymous">
+    <link href="bootstrap.min.css" rel="stylesheet" integrity="sha384-715VMUUaOfZR3/rWXZJ9agJ/udwSXGEigabzUbJm2NR4/v5wpDy8c14yedZN6NL7" crossorigin="anonymous">
+    <link href="bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="polaroid-img.css">
     <script src="https://kit.fontawesome.com/fd63d41372.js" crossorigin="anonymous"></script>
     <title>Jorawar Singh - Portfolio</title>
   </head>
@@ -17,29 +19,39 @@
     <!-- front-image -->
     <div id="home" class="img-container desktop">
       <img id="front-image" class="img-fluid front-background" src="images/front-background.jpg" alt=""></img>
-      <div class="centered-box mx-auto animated fadeInLeft desktop">
+      <div class="centered-box mx-auto animated fadeInLeft">
         <div class="row">
             <h1 class="text-white mx-auto">Hi! I am <span id="author"><a href="#About" class="author-name">Jorawar Singh</a></span></h1>
         </div>
         <div class="row mt-50">
+          <div class="col-sm-6 mx-auto">
             <a id="find-out" class="btn btn-lg btn-block btn-danger mx-auto" href="#about">Find Out More <i class="fas fa-angle-double-right"></i></a>
+          </div> 
         </div>
       </div>
-      <div class="animated fadeInLeft mobile">
+      <!-- <div class="animated fadeInLeft mobile">
         <div class="row">
             <h6 class="mx-auto">Hi! I am <span id="author"><a href="#About" class="author-name">Jorawar Singh</a></span></h6>
         </div>
         <div class="row mt-50">
             <a id="find-out" class="btn btn-lg btn-block btn-danger mx-auto" href="#about">Find Out More <i class="fas fa-angle-double-right"></i></a>
         </div>
-      </div>
+      </div> -->
       <!-- <span class="text-sm-right text-grey font-italic" id="img-author">Photo by Ales Nesetril on Unsplash</span> -->
     </div>
 
     <!-- Mobile Home Page -->
-    <div id="mobile-home">
+    <div id="mobile-home" class="mobile">
       <div class="container">
-        <h1 id="welcome-text" class="text-center">Hi I am Jorawar Singh!</h1>
+        <h1 id="welcome-text" class="text-center">Hi I am a Web Developer!</h1>
+        <div class="wrapper">
+          <div class="item">
+            <div class="polaroid">
+              <img src="images/myPhoto.jpg">
+              <div class="caption">Jorawar Singh</div>
+            </div>
+          </div>
+        </div>
         <div id="menu-options" class="mx-auto text-center">
           <h1 class="underline py-3 animated fadeInLeft">About</h1>
           <h1 class="underline py-3 animated fadeInRight">Portfolio</h1>
@@ -56,7 +68,7 @@
     <div class="main-content desktop">
       <!-- <div class="partition"></div> -->
       <div id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark-blue">
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
           <div class="container">
             <button
               class="navbar-toggler"
@@ -98,7 +110,7 @@
             <div class="partition"></div>
           </div>
           <div class="row mt-4">
-            <div id="author-detail" class="col-md-6">
+            <div id="author-detail" class="col-md-6 card shadow p-4 mb-5 bg-white rounded">
               <img id="author-image" src="images/myPhoto.jpg" alt="author-image" class="border rounded mx-auto d-block">
               <h2 class="text-center my-1">Who am I?</h2>
               <p class="text-center my-2">
@@ -106,39 +118,41 @@
               </p>
             </div>
             <div class="col-md-6">
-              <div class="scale-wrapper container">  
+              <div class="scale-wrapper container card shadow p-4 mb-5 bg-white rounded">  
               </div>
             </div>
           </div>
 
           <!-- Qualities section -->
           <div class="row">
-            <div class="col-md-3 my-2">
-              <img src="images/img-1.jpg" alt="" class="about-img rounded mx-auto">
-              <br>
-              <div class="text-center my-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div class="card-deck">
+              <div class="col-md-3 my-2 card">
+                <img src="images/problem-solver.jpg" alt="" class="about-img rounded mx-auto">
+                <br>
+                <div class="text-center my-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
               </div>
-            </div>
-            <div class="col-md-3 my-2">
-              <img src="images/img-1.jpg" alt="" class="about-img rounded mx-auto">
-              <br>
-              <div class="text-center my-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <div class="col-md-3 my-2 card">
+                <img src="images/designer.jpg" alt="" class="about-img rounded mx-auto">
+                <br>
+                <div class="text-center my-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
               </div>
-            </div>
-            <div class="col-md-3 my-2">
-              <img src="images/img-1.jpg" alt="" class="about-img rounded mx-auto">
-              <br>
-              <div class="text-center my-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <div class="col-md-3 my-2 card">
+                <img src="images/algorithms.jpg" alt="" class="about-img rounded mx-auto">
+                <br>
+                <div class="text-center my-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
               </div>
-            </div>
-            <div class="col-md-3 my-2">
-              <img src="images/img-1.jpg" alt="" class="about-img rounded mx-auto">
-              <br>
-              <div class="text-center my-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <div class="col-md-3 my-2 card">
+                <img src="images/hardwork.jpg" alt="" class="about-img rounded mx-auto">
+                <br>
+                <div class="text-center my-2">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
               </div>
             </div>
           </div>
