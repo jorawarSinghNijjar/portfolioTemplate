@@ -46,9 +46,22 @@ $(document).ready(function(){
 // Mobile Menu button
 
 $('#menu-btn').click(()=>{
-    $('#welcome-text').fadeOut(()=>{
-        $('#menu-options').show();
-    });
+    if($('#menu-text').text() == "Menu"){
+        $('#welcome-text').fadeOut(()=>{
+            $('#home-author-img').hide();
+            $('#menu-text').text('Back');
+            $('#menu-options').show();
+        });
+    }
+    else{
+        $('#menu-options').fadeOut(()=>{
+            $('#welcome-text').fadeIn();
+            $('#home-author-img').fadeIn();
+            $('#menu-text').text('Menu');
+        });
+        
+    }
+    
     
 });
 
