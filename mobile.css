@@ -10,16 +10,13 @@
 
 #menu-btn {
   background-color: #e65454;
+  margin-top:5rem;
   width: 7rem;
   height: 7rem;
   border-radius: 50%;
   -webkit-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.75);
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  margin-left: -3.5rem;
   transition: transform .2s;
 }
 
@@ -34,8 +31,6 @@
 }
 
 #menu-options{
-    position: relative;
-    top:20vh;
     width:max-content;
     display: none;
 }
@@ -46,6 +41,10 @@
 
 #welcome-text{
     display:block;
-    position: relative;
-    top:15vh;
 }
+
+a,a:hover,a:active{
+  text-decoration: none;
+  color:inherit;
+}
+
