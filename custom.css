@@ -22,7 +22,7 @@ html{
     height:3rem !important;
 }
 .author-name{
-    color:#0D0E20;
+    color: white;
     font-size: 3rem;
 }
 .centered-box h1{
@@ -67,7 +67,7 @@ a{
 }
 
 .author-name:hover{
-    color: white;
+    color: darkcyan;
     text-decoration: none;
 }
 
