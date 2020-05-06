@@ -142,3 +142,7 @@ a{
 .desktop{
     display: none;
 }
+
+.project-img{
+    height: 12rem;
+}
