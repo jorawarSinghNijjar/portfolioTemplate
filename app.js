@@ -168,5 +168,140 @@ const animateAbout = () => {
     animationDone = true;
 }
 
+//Projects
+let projects = [];
+let reactBadge = `<span class="badge bg-react"><i class="fab fa-react"></i></span> `;
+let bootstrapBadge = `<span class="badge bg-red"><i class="fab fa-bootstrap"></i></span> `;
+let cssBadge = `<span class="badge badge-info"><i class="fab fa-css3-alt"></i></span> `;
+let semanticUIBadge = `<span class="badge badge-warning">S</span> `;
+let unsplashBadge = `<span class="badge badge-success">Unsplash</span> `;
+let html5Badge = `<span class="badge bg-green"><i class="fab fa-html5"></i></span> `;
+let jQueryBadge = `<span class="badge badge-danger"><img src="images/jquery.png" style="width:1em;"/></span> `;
+let javaScriptBadge = `<span class="badge badge-warning"><i class="fab fa-js-square"></i></span> `;
+let materializeBadge = `<span class="bg-white"><img src="images/materialize.svg" style="width:1em;"/></span>`;
+
+class Project{
+
+    constructor(name,imageSrc, href, cardTitle, cardText){
+        this.name = name;
+        this.imageSrc = imageSrc;
+        this.href = href;
+        this.cardTitle = cardTitle;
+        this.cardText = cardText;
+        this.setBadges(this.name);
+        projects.push(this);
+    }
+
+    
+
+        setBadges(projectName){
+            
+            switch(projectName){
+                case "healthCare365":
+                    this.badges = html5Badge + reactBadge + bootstrapBadge;
+                    console.log("hello");
+                    break;
+                case "easyCoding":
+                    this.badges = html5Badge + javaScriptBadge + cssBadge + jQueryBadge;
+                    break;
+                case "pictureSearch":
+                    this.badges = html5Badge + javaScriptBadge + cssBadge + bootstrapBadge + jQueryBadge;
+                    break;
+                case "myApp":
+                    this.badges = html5Badge + cssBadge + bootstrapBadge;
+                    break;
+                case "loanCalculator":
+                    this.badges = html5Badge + cssBadge + bootstrapBadge + javaScriptBadge;
+                    break;
+                case "traCalorie":
+                    this.badges = html5Badge + cssBadge + javaScriptBadge + materializeBadge;
+                    break;
+                case "gitHubFinder":
+                    this.badges = html5Badge + cssBadge + javaScriptBadge + materializeBadge;
+                    break;
+                case "taskList":
+                    this.badges = html5Badge + cssBadge + javaScriptBadge + materializeBadge;
+                    break;
+                default:
+                    this.badges = "";
+            }
+        }
+
+}
+
+
+const healthCare365 = new Project("healthCare365","images/Healthcare-img.jpg","https://healthcare-365.herokuapp.com/","Healthcare 365","This application is a management tool for clinics and hospitals. It provides patient registeration service to keep a record of patients. More services will be added soon.");
+
+const easyCoding = new Project("easyCoding","images/easyCoding.jpg","https://jorawarsinghnijjar.github.io/easyCoding/","Easy Coding","Provides live editing of a webpage using HTML, CSS and JAVASCRIPT. Very easy to use and user-friendly interface.");
+
+const pictureSearch = new Project("pictureSearch","images/pictureSearch.jpeg","https://jorawarsinghnijjar.github.io/pictureSearch/","Picture Search","Simple image search application developed with React and powered by Unsplash API.");
+
+const myApp = new Project("myApp","images/myApp.JPG","https://jorawarsinghnijjar.github.io/myApp/","My App","This a simple bootstrap designed web page with scroll spy.");
+
+const loanCalculator = new Project("loanCalculator","images/loanCalculator.JPG","https://jorawarsinghnijjar.github.io/loanCalculator/","Simple Loan and EMI Calculator","It is a basic EMI calculator designed using bootstrap.");
+
+const traCalorie = new Project("traCalorie","images/TracCalorie.JPG","https://jorawarsinghnijjar.github.io/TracCalorie/","TraCalorie","Application designed to keep a track of calories");
+
+const gitHubFinder = new Project("gitHubFinder","images/gitHubFinder.jpg","https://jorawarsinghnijjar.github.io/gitHubFinder/","GitHub Finder","Github User search application powered by GitHub API designed using pure JavaScript.");
+
+const taskList = new Project("taskList","images/taskList.JPG","https://jorawarsinghnijjar.github.io/taskList/",
+"Task List","Web App to save the To do tasks designed using Materialize");
+
+console.log(projects);
+let projectSection = document.querySelector('#projects-display');
+
+
+for(let i=0; i<projects.length; i+=2){
+
+    projectSection.innerHTML += 
+
+    `<div class="row mt-4">
+    <div class="col-md">
+      <a href="${projects[i].href}" target="_blank">
+      <div class="card text-white bg-primary shadow mb-4" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="${projects[i].imageSrc}" alt=""
+              class="card-img img-fluid">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${projects[i].cardTitle} ${projects[i].badges}</h5>
+              <p class="card-text">${projects[i].cardText}<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </a>
+    </div>
+    
+    <div class="col-md">
+      <a href="${projects[i+1].href}" target="_blank">
+        <div class="card text-white bg-primary shadow mb-4" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="${projects[i+1].imageSrc}"
+            class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${projects[i+1].cardTitle} ${projects[i+1].badges}</h5>
+                <p class="card-text">${projects[i+1].cardText}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    </div>`;
+    
+};
+
+
+
+
+
+
 
 

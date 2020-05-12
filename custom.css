@@ -6,6 +6,20 @@ html{
     background-color: rgb(0, 33, 73);
 }
 
+.bg-violet{
+    background-color: #46256F;
+}
+.bg-red{
+    background-color: #E87965;
+}
+
+.bg-green{
+    background-color: #36BC9B;
+}
+
+.bg-react{
+    background-color: #00D8FF;
+}
 .text-white{
     color: white;
 }
