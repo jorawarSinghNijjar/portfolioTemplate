@@ -149,6 +149,7 @@ const authorDetail = document.querySelector('#author-detail');
 const aboutUnderline = document.querySelector('#about-underline');
 
 const animateAbout = () => {
+    
     aboutHeading.classList.add('animated','bounceInLeft','slower');
     scaleWrapper.classList.add('animated','bounceInRight','slower');
     authorDetail.classList.add('animated','bounceInLeft','slower');
@@ -199,7 +200,7 @@ class Project{
             switch(projectName){
                 case "healthCare365":
                     this.badges = html5Badge + reactBadge + bootstrapBadge;
-                    console.log("hello");
+                    
                     break;
                 case "easyCoding":
                     this.badges = html5Badge + javaScriptBadge + cssBadge + jQueryBadge;
@@ -247,7 +248,7 @@ const gitHubFinder = new Project("gitHubFinder","images/gitHubFinder.jpg","https
 const taskList = new Project("taskList","images/taskList.JPG","https://jorawarsinghnijjar.github.io/taskList/",
 "Task List","Web App to save the To do tasks designed using Materialize");
 
-console.log(projects);
+
 let projectSection = document.querySelector('#projects-display');
 
 
@@ -299,6 +300,45 @@ for(let i=0; i<projects.length; i+=2){
 };
 
 
+//Mobile: Menu item events
+
+function changeHeadingsColor(color) {
+    $('#projects-heading').css({'color': color});
+    $('#about-heading').css({'color':color});
+    $('#contact-heading').css({'color':color});
+}
+
+function changeDesign(){
+    $('.main-content').show();
+    changeHeadingsColor("#0071BD");
+    $('.partition').css({"background-color": "#108781"});
+    $('#navbar').hide();
+}
+
+
+$('#about-mobile-link').click(()=>{
+    changeDesign();
+    // $('.main-content').css({"background": "#1D976C",
+    // "background": "-webkit-linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb)",
+    // "background": "linear-gradient(to right,#1fa2ff, #12d8fa, #a6ffcb)"});
+    // $('.main-content').css({"background": "#36bc9b"});
+});
+
+$('#portfolio-mobile-link').click(()=>{
+    changeDesign();
+    // $('.main-content').css({"background": "#1D976C",
+    // "background": "-webkit-linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb)",
+    // "background": "linear-gradient(to right,#1fa2ff, #12d8fa, #a6ffcb)"});
+    // $('.main-content').css({"background": "#36bc9b"});
+});
+
+$('#contact-mobile-link').click(()=>{
+    changeDesign();
+    // $('.main-content').css({"background": "#1D976C",
+    // "background": "-webkit-linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb)",
+    // "background": "linear-gradient(to right,#1fa2ff, #12d8fa, #a6ffcb)"});
+    // $('.main-content').css({"background": "#36bc9b"});
+});
 
 
 
