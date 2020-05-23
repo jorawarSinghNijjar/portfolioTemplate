@@ -1,3 +1,5 @@
+//Mobile mode
+let mobileMode = false;
 //Size change effect in window
 
 const desktopContent = document.getElementsByClassName("desktop");
@@ -21,7 +23,7 @@ function hideNodes(arr){
 function displayContent(){
     let viewportWidth = window.innerWidth;
     if(viewportWidth <= 500){
-
+        mobileMode = true;
         showNodes(mobileContentArr);
         hideNodes(desktopContentArr);
         // frontImage.style.objectFit = "cover";
@@ -31,6 +33,7 @@ function displayContent(){
         // centerBoxMobile.style.display = "block";
     }
     else{
+        mobileMode = false;
         showNodes(desktopContentArr);
         hideNodes(mobileContentArr);
     }
@@ -89,7 +92,7 @@ const html = document.querySelector('html');
 const nav = document.querySelector('#navbar');
 
 window.addEventListener('scroll', (e) => {
-    if((html.clientHeight - window.scrollY) < 0){
+    if((html.clientHeight - window.scrollY) < 50){
         nav.classList.add('fixed-top');
         
         if(!animationDone){
@@ -150,10 +153,12 @@ const aboutUnderline = document.querySelector('#about-underline');
 
 const animateAbout = () => {
     
-    aboutHeading.classList.add('animated','bounceInLeft','slower');
-    scaleWrapper.classList.add('animated','bounceInRight','slower');
-    authorDetail.classList.add('animated','bounceInLeft','slower');
-    aboutUnderline.classList.add('animated','bounceInLeft', 'slower');
+    if(!mobileMode){
+        aboutHeading.classList.add('animated','bounceInLeft','slower');
+        scaleWrapper.classList.add('animated','bounceInRight','slower');
+        authorDetail.classList.add('animated','bounceInLeft','slower');
+        aboutUnderline.classList.add('animated','bounceInLeft', 'slower');
+    }
     
     setTimeout(()=>{
         percentArr.forEach(item =>{
@@ -306,6 +311,7 @@ function changeHeadingsColor(color) {
     $('#projects-heading').css({'color': color});
     $('#about-heading').css({'color':color});
     $('#contact-heading').css({'color':color});
+    $('#qualities-heading').css({'color':color});
 }
 
 function changeDesign(){
@@ -313,31 +319,23 @@ function changeDesign(){
     changeHeadingsColor("#0071BD");
     $('.partition').css({"background-color": "#108781"});
     $('#navbar').hide();
+    $('#about').css({"padding-top":"10px"});
 }
 
 
 $('#about-mobile-link').click(()=>{
     changeDesign();
-    // $('.main-content').css({"background": "#1D976C",
-    // "background": "-webkit-linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb)",
-    // "background": "linear-gradient(to right,#1fa2ff, #12d8fa, #a6ffcb)"});
-    // $('.main-content').css({"background": "#36bc9b"});
+    
 });
 
 $('#portfolio-mobile-link').click(()=>{
     changeDesign();
-    // $('.main-content').css({"background": "#1D976C",
-    // "background": "-webkit-linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb)",
-    // "background": "linear-gradient(to right,#1fa2ff, #12d8fa, #a6ffcb)"});
-    // $('.main-content').css({"background": "#36bc9b"});
+    
 });
 
 $('#contact-mobile-link').click(()=>{
     changeDesign();
-    // $('.main-content').css({"background": "#1D976C",
-    // "background": "-webkit-linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb)",
-    // "background": "linear-gradient(to right,#1fa2ff, #12d8fa, #a6ffcb)"});
-    // $('.main-content').css({"background": "#36bc9b"});
+  
 });
 
 
