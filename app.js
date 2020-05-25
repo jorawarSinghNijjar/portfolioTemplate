@@ -320,6 +320,7 @@ function changeDesign(){
     $('.partition').css({"background-color": "#108781"});
     $('#navbar').hide();
     $('#about').css({"padding-top":"10px"});
+    $('#mobile-home').hide();
 }
 
 
