@@ -321,23 +321,40 @@ function changeDesign(){
     $('#navbar').hide();
     $('#about').css({"padding-top":"10px"});
     $('#mobile-home').hide();
+    $('.main-content').css({"position":"absolute", "top":"0","left":"0"});
+    $('#back-to-menu').show();
+    $('#about').css({"margin-top":"1rem"});
+    if(!animationDone){
+        animateAbout();
+    }
 }
 
 
 $('#about-mobile-link').click(()=>{
     changeDesign();
-    
 });
 
 $('#portfolio-mobile-link').click(()=>{
     changeDesign();
-    
 });
 
 $('#contact-mobile-link').click(()=>{
     changeDesign();
-  
 });
+
+//Back to menu click
+const backToMenuButton = document.getElementById("back-to-menu-button");
+backToMenuButton.addEventListener('click', () => {
+    
+    $('#about').css({"padding-top":"120px"});
+    $('.main-content').css({"position":"absolute", "top":"100vh","left":"0"});
+    $('#mobile-home').show();
+    $('.main-content').hide();
+    
+})
+
+
+
 
 
 
