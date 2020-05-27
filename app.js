@@ -26,11 +26,7 @@ function displayContent(){
         mobileMode = true;
         showNodes(mobileContentArr);
         hideNodes(desktopContentArr);
-        // frontImage.style.objectFit = "cover";
-        // frontImage.style.height="70%";
-        // frontImage.style.marginTop="2rem";
-        // centerBoxDesktop.style.display = "none";
-        // centerBoxMobile.style.display = "block";
+        
     }
     else{
         mobileMode = false;
@@ -38,12 +34,14 @@ function displayContent(){
         hideNodes(mobileContentArr);
     }
 }
-$(window).resize(function(){
-    displayContent();
-});
-$(document).ready(function(){
-    displayContent();
-});
+
+displayContent();
+// $(window).resize(function(){
+//     displayContent();
+// });
+// $(document).ready(function(){
+//     displayContent();
+// });
 
 
 // Mobile Menu button
@@ -56,7 +54,7 @@ $('#menu-btn').click(()=>{
             $('#menu-options').show();
         });
     }
-    else{
+    else if($('#menu-text').text() == "Back"){
         $('#menu-options').fadeOut(()=>{
             $('#welcome-text').fadeIn();
             $('#home-author-img').fadeIn();
@@ -73,14 +71,13 @@ let animationDone = false;
 //animate find out button
 const findOut = document.querySelector("#find-out");
 const findOutArrow = document.querySelector(".fa-angle-double-right");
-// findOut.classList.add("animated","heartBeat");
+
 findOut.addEventListener("mouseenter",() => {
     
     $(findOutArrow).animate({marginLeft:"5rem"});
 });
 
 findOut.addEventListener("mouseleave",() => {
-    // findOut.classList.remove("animated","wobble");
     $(findOutArrow).animate({marginLeft:"0rem"});
 });
 
