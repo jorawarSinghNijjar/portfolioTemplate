@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 
 #mobile-home {
-  background-color: #36bc9b;
+  background-color: rgb(46, 82, 117);
   width: 100vw;
   height: 100vh;
   color:white;
@@ -9,7 +9,7 @@
 }
 
 #menu-btn {
-  background-color: #e65454;
+  background-color:  	#CD853F;
   margin-top:3rem;
   width: 7rem;
   height: 7rem;
