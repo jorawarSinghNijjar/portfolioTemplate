@@ -1,5 +1,6 @@
 //Mobile mode
 let mobileMode = false;
+
 //Size change effect in window
 
 const desktopContent = document.getElementsByClassName("desktop");
@@ -68,6 +69,7 @@ $('#menu-btn').click(()=>{
 
 
 let animationDone = false;
+let deAnimationDone = false;
 //animate find out button
 const findOut = document.querySelector("#find-out");
 const findOutArrow = document.querySelector(".fa-angle-double-right");
@@ -89,19 +91,27 @@ const html = document.querySelector('html');
 const nav = document.querySelector('#navbar');
 
 window.addEventListener('scroll', (e) => {
-    if((html.clientHeight - window.scrollY) < 50){
-        nav.classList.add('fixed-top');
-        
-        if(!animationDone){
-            animateAbout();
+    if(window.scrollY > 1000 || window.scrollY < 300){
+        if(!deAnimationDone){
+            deAnimateAbout();
         }
         
-        
+    }
+
+    if(window.scrollY > 300){
+        nav.classList.add('fixed-top');
+        console.log(window.scrollY);
+        if(!animationDone){
+            animateAbout();
+        }  
     }
     else{
         nav.classList.remove('fixed-top');
     }
+
 });
+
+
 
 
 
@@ -149,12 +159,19 @@ const authorDetail = document.querySelector('#author-detail');
 const aboutUnderline = document.querySelector('#about-underline');
 
 const animateAbout = () => {
-    
+   
     if(!mobileMode){
-        aboutHeading.classList.add('animated','bounceInLeft','slower');
-        scaleWrapper.classList.add('animated','bounceInRight','slower');
-        authorDetail.classList.add('animated','bounceInLeft','slower');
-        aboutUnderline.classList.add('animated','bounceInLeft', 'slower');
+
+        //remove fadeouts
+        aboutHeading.classList.remove('animated','fadeOutLeft');
+        scaleWrapper.classList.remove('animated','fadeOutRight');
+        authorDetail.classList.remove('animated','fadeOutLeft');
+        aboutUnderline.classList.remove('animated','fadeOutLeft');
+        //add fadins
+        aboutHeading.classList.add('animated','fadeInLeft','slow');
+        scaleWrapper.classList.add('animated','fadeInRight','slow');
+        authorDetail.classList.add('animated','fadeInLeft','slow');
+        aboutUnderline.classList.add('animated','fadeInLeft','slow');
     }
     
     setTimeout(()=>{
@@ -162,7 +179,7 @@ const animateAbout = () => {
             let width = item.textContent.trim().slice(0,-1) + "%";
             $(item).animate({
                 width: width,
-            },'slow');
+            },1000);
             $(item.children[0]).show();
         });
         
@@ -170,6 +187,25 @@ const animateAbout = () => {
 
     animationDone = true;
 }
+
+//deAnimate functions
+const deAnimateAbout = () => {
+    if(!mobileMode){
+        aboutHeading.classList.remove('animated','fadeInLeft');
+        scaleWrapper.classList.remove('animated','fadeInRight');
+        authorDetail.classList.remove('animated','fadeInLeft');
+        aboutUnderline.classList.remove('animated','fadeInLeft');
+        // fading away
+        aboutHeading.classList.add('animated','fadeOutLeft');
+        scaleWrapper.classList.add('animated','fadeOutRight');
+        authorDetail.classList.add('animated','fadeOutLeft');
+        aboutUnderline.classList.add('animated','fadeOutLeft');
+
+        deAnimationDone=true;
+    }
+
+}
+
 
 //Projects
 let projects = [];
