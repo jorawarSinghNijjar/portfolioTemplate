@@ -273,7 +273,7 @@ class Project{
 const animalifeTV = new Project("animalifeTV","images/white-dog.jpg","https://jorawarsinghnijjar.github.io/animalifeTV/",
 "AnimalifeTV","Front End Web Design for a wildlife broadcasting company. Developed using Sass preprocesser.");
 
-const healthCare365 = new Project("healthCare365","images/Healthcare-img.jpg","https://healthcare-365.herokuapp.com/","Healthcare 365","This application is a management tool for clinics and hospitals. It provides patient registeration service to keep a record of patients. More services will be added soon.");
+const healthCare365 = new Project("healthCare365","images/Healthcare-img.jpg","https://jorawarsinghnijjar.github.io/HealthCareApp/","Healthcare 365","This application is a management tool for clinics and hospitals. It provides patient registeration service to keep a record of patients. More services will be added soon.");
 
 const easyCoding = new Project("easyCoding","images/easyCoding.jpg","https://jorawarsinghnijjar.github.io/easyCoding/","Easy Coding","Provides live editing of a webpage using HTML, CSS and JAVASCRIPT. Very easy to use and user-friendly interface.");
 
