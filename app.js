@@ -100,7 +100,6 @@ window.addEventListener('scroll', (e) => {
 
     if(window.scrollY > 300){
         nav.classList.add('fixed-top');
-        console.log(window.scrollY);
         if(!animationDone){
             animateAbout();
         }  
@@ -236,6 +235,9 @@ class Project{
         setBadges(projectName){
             
             switch(projectName){
+                case "animalifeTV":
+                    this.badges = html5Badge + cssBadge;
+                    break;
                 case "healthCare365":
                     this.badges = html5Badge + reactBadge + bootstrapBadge;
                     
@@ -268,6 +270,8 @@ class Project{
 
 }
 
+const animalifeTV = new Project("animalifeTV","images/white-dog.jpg","https://jorawarsinghnijjar.github.io/animalifeTV/",
+"AnimalifeTV","Front End Web Design for a wildlife broadcasting company. Developed using Sass preprocesser.");
 
 const healthCare365 = new Project("healthCare365","images/Healthcare-img.jpg","https://healthcare-365.herokuapp.com/","Healthcare 365","This application is a management tool for clinics and hospitals. It provides patient registeration service to keep a record of patients. More services will be added soon.");
 
@@ -275,7 +279,7 @@ const easyCoding = new Project("easyCoding","images/easyCoding.jpg","https://jor
 
 const pictureSearch = new Project("pictureSearch","images/pictureSearch.jpeg","https://jorawarsinghnijjar.github.io/pictureSearch/","Picture Search","Simple image search application developed with React and powered by Unsplash API.");
 
-const myApp = new Project("myApp","images/myApp.JPG","https://jorawarsinghnijjar.github.io/myApp/","My App","This a simple bootstrap designed web page with scroll spy.");
+// const myApp = new Project("myApp","images/myApp.JPG","https://jorawarsinghnijjar.github.io/myApp/","My App","This a simple bootstrap designed web page with scroll spy.");
 
 const loanCalculator = new Project("loanCalculator","images/loanCalculator.JPG","https://jorawarsinghnijjar.github.io/loanCalculator/","Simple Loan and EMI Calculator","It is a basic EMI calculator designed using bootstrap.");
 
