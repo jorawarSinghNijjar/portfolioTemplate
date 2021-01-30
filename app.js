@@ -275,6 +275,12 @@ const animalifeTV = new Project("animalifeTV","images/white-dog.jpg","https://jo
 
 const healthCare365 = new Project("healthCare365","images/Healthcare-img.jpg","https://jorawarsinghnijjar.github.io/HealthCareApp/","Healthcare 365","This application is a management tool for clinics and hospitals. It provides patient registeration service to keep a record of patients. More services will be added soon.");
 
+const loopEducation = new Project("loopEducation","images/loop-education-logo.png","https://jorawarsinghnijjar.github.io/loop-education-test/",
+"Loop Education Services","Immigration and Education services website front end developed using React.js");
+
+const weatherApp = new Project("weatherApp","images/weather-app.png","https://jorawarsinghnijjar.github.io/weather-app/",
+"Weather App","Web App to stay informed about weather conditions around the world");
+
 const easyCoding = new Project("easyCoding","images/easyCoding.jpg","https://jorawarsinghnijjar.github.io/easyCoding/","Easy Coding","Provides live editing of a webpage using HTML, CSS and JAVASCRIPT. Very easy to use and user-friendly interface.");
 
 const pictureSearch = new Project("pictureSearch","images/pictureSearch.jpeg","https://jorawarsinghnijjar.github.io/pictureSearch/","Picture Search","Simple image search application developed with React and powered by Unsplash API.");
