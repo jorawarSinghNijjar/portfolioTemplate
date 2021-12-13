@@ -122,27 +122,29 @@ const skills = [
     { name: 'Java', value: 80 },
     { name: 'Javascript', value: 90 },
     { name: 'HTML', value: 80 },
-    { name: 'CSS', value: 70 },
-    { name: 'React', value: 70 },
-    { name: 'Node.js', value: 60 },
-    { name: 'Bootstrap', value: 70 },
-    { name: 'Python', value: 40 }
+    { name: 'CSS', value: 85 },
+    { name: 'React', value: 80 },
+    { name: 'Node.js', value: 85 },
+    { name: 'SpringBoot', value: 70 },
+    { name: 'Webflow', value: 80 }
 ];
+
 
 skills.forEach(skill => {
     scaleWrapper.innerHTML += `
         <div class="scale my-2">
             <div class="skill-name text-white">
+                <span class="v-center">
                 ${skill.name}
+                </span>
             </div>
             <div class="percent-wrapper">
                 <div class="skill-percentage">
-                    <span class="skill-value">${skill.value}%</span>
+                    <span class="skill-value v-center">${skill.value}%</span>
                 </div>
             </div>
         </div>
     `;
-
 });
 
 
@@ -178,7 +180,7 @@ const animateAbout = () => {
             let width = item.textContent.trim().slice(0, -1) + "%";
             $(item).animate({
                 width: width,
-            }, 1000);
+            }, 2500);
             $(item.children[0]).show();
         });
 

@@ -71,6 +71,14 @@ html{
     height:100vh;
     padding:1%;
 }
+
+.v-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #img-author{
     position: relative;
     top: -30px;
@@ -96,6 +104,7 @@ a{
 }
 
 .skill-name{
+    position: relative;
     float: left;
     height: 100%;
     width:25%;
@@ -110,6 +119,7 @@ a{
 }
 
 .skill-percentage{
+    position: relative;
     background-color: #43bc41;
     width:0%;
     height:100%;
